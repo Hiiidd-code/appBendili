@@ -9,8 +9,10 @@
 
 <div class="max-w-6xl mx-auto px-4 py-8 space-y-8">
 
+ 
     {{-- Hero: ucapan selamat datang + foto pimpinan --}}
-    <section class="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center">
+    <div class="container mx-auto px+2">
+    <section class="bg-yellow-400 rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center">
         <div class="flex-1">
             <h1 class="text-2xl md:text-3xl font-bold mb-3">
                 Selamat Datang di Website Kantor PT. United Tractors Bendili
@@ -20,12 +22,13 @@
                 Di sini Anda dapat melihat berita terbaru, pengumuman penting, dan akses dokumen kerja yang terhubung dengan Google Drive.
             </p>
         </div>
-        <div class="w-40 h-40 rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
+        <div class="w-40 h-40 rounded-sm overflow-hidden border flex-shrink-0">
             {{-- Pastikan file: public/images/boss.jpg --}}
-            <img src="{{ asset('images/boss.webp') }}" alt="Pimpinan Kantor"
+            <img src="{{ asset('images/boss.png') }}" alt="Pimpinan Kantor"
                  class="w-full h-full object-cover">
         </div>
     </section>
+    </div>
 <p class="pelangi">YA BEGITULAH</p>
     {{-- Daftar berita terbaru --}}
     <section class="bg-white rounded-lg shadow p-6">
