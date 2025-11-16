@@ -22,15 +22,16 @@
         </div>
         <div class="w-40 h-40 rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
             {{-- Pastikan file: public/images/boss.jpg --}}
-            <img src="{{ asset('images/boss.jpg') }}" alt="Pimpinan Kantor"
+            <img src="{{ asset('images/boss.webp') }}" alt="Pimpinan Kantor"
                  class="w-full h-full object-cover">
         </div>
     </section>
-
+<p class="pelangi">YA BEGITULAH</p>
     {{-- Daftar berita terbaru --}}
     <section class="bg-white rounded-lg shadow p-6">
         <div class="flex items-center justify-between mb-4">
             <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
+            
         </div>
 
         @if($latestNews->isEmpty())
