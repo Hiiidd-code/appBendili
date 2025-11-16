@@ -31,6 +31,7 @@
     <section class="bg-white rounded-lg shadow p-6">
         <div class="flex items-center justify-between mb-4">
             <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
+            <h2 class="pelangi">TEST</h2>
         </div>
 
         @if($latestNews->isEmpty())

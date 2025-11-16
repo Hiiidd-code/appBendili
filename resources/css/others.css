@@ -1,0 +1,35 @@
+.pelangi {
+    font-family: cursive;
+    text-align: center;
+    font-size: 45px;
+    animation: rubahwarna 6s linear 0s infinite;
+}
+
+@keyframes rubahwarna {
+     from {
+    color: #ff6666;
+  }
+   0% {
+                transform: translateY(0);
+            }
+            
+  10% {
+    color: #ff0080;
+  }
+  50% {
+    color: #7b00ff;
+  }50% {
+                transform: translateY(-20px);
+            }
+
+  75% {
+    color: #33ff8f;
+  }
+
+  100% {
+    color: #f7ff66;
+  }
+  100% {
+                transform: translateY(0);
+            }
+}
