@@ -30,3 +30,7 @@ Route::middleware(['auth', 'is_admin'])
         Route::resource('news', NewsController::class);
     });
 
+Route::fallback(function () {
+    return view('errors.404');
+});
+

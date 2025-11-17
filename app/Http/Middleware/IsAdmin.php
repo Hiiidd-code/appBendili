@@ -24,8 +24,6 @@ class IsAdmin
         // Memeriksa status login dan hak akses admin
         if (!Auth::check() || !$request->user()->is_admin) {
             abort(403, 'Anda tidak memiliki akses ke halaman ini.');
-        }
-
-        return $next($request);
+        } return $next($request);
     }
 }

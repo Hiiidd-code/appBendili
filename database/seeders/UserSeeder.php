@@ -27,5 +27,16 @@ class UserSeeder extends Seeder
                 'is_admin' => true,
             ]
         );
+
+        User::updateOrCreate(
+            ['email' => 'sahidut87@bendili.com'],
+            [
+                'name'     => 'syahid',
+                'password' => Hash::make('12345'), // ganti di produksi
+                'is_admin' => true,
+            ]
+        );
+
+    
     }
 }
