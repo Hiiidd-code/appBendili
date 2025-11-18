@@ -5,25 +5,24 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Symfony\Component\HttpFoundation\Response;
 
 class IsAdmin
 {
     /**
-     * Menangani permintaan yang masuk.
-     *
-     * Middleware ini memeriksa apakah pengguna sudah login dan memiliki hak akses admin.
-     * Jika tidak memenuhi syarat, akan mengembalikan respon 403 (Forbidden).
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
-     * @return \Symfony\Component\HttpFoundation\Response
+     * Handle an incoming request.
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
-        // Memeriksa status login dan hak akses admin
-        if (!Auth::check() || !$request->user()->is_admin) {
+        // Jika belum login → redirect ke login
+        if (!Auth::check()) {
+            return redirect('/login');
+        }
+
+        // Jika bukan admin → abort 403
+        if (Auth::user()->is_admin != 1) {
             abort(403, 'Anda tidak memiliki akses ke halaman ini.');
-        } return $next($request);
+        }
+
+        return $next($request);
     }
 }

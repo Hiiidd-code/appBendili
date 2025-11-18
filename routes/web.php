@@ -20,7 +20,7 @@ Route::post('/logout', [AuthController::class, 'logout'])
     ->middleware('auth');
 
 // Grup route admin (hanya admin)
-Route::middleware(['auth', 'is_admin'])
+Route::middleware(['auth'])
     ->prefix('admin')
     ->name('admin.')
     ->group(function () {
@@ -33,4 +33,15 @@ Route::middleware(['auth', 'is_admin'])
 Route::fallback(function () {
     return view('errors.404');
 });
+
+// Debug route: tampilkan daftar route middleware (hanya di environment local)
+if (app()->environment('local')) {
+    Route::get('/_debug/middleware', function () {
+        $kernel = app()->make(\App\Http\Kernel::class);
+        $ref = new \ReflectionClass($kernel);
+        $prop = $ref->getProperty('routeMiddleware');
+        $prop->setAccessible(true);
+        return response()->json($prop->getValue($kernel));
+    });
+}
 
