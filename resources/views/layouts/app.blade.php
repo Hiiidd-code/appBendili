@@ -7,42 +7,55 @@
 
     {{-- Tailwind CDN (untuk development cepat) --}}
     <script src="https://cdn.tailwindcss.com"></script>
+
+    @vite(['resources/js/react/app.tsx'])
+
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
 
     {{-- Navbar sederhana --}}
-    <nav class="bg-white shadow">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="{{ route('home') }}" class="font-bold text-lg">
-                PT. United Tractors Bendili
-            </a>
-
-            <div class="flex items-center gap-4">
-                <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
-                    Beranda
-                </a>
-
-                @auth
-                    @if(auth()->user()->is_admin)
-                        <a href="{{ route('admin.dashboard') }}" class="text-sm hover:text-blue-600">
-                            Dashboard Admin
+    <div>
+        <div>
+            <div class="">
+                            <nav class="bg-white shadow">
+                    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+                    <a href="{{ route('home') }}" class="font-bold text-lg flex items-center space-x-3 rtl:space-x-reverse">
+                            <img src="{{ asset("logo.webp") }}" class="w-120px h-50">
                         </a>
-                    @endif
 
-                    <form action="{{ route('logout') }}" method="POST" class="inline">
-                        @csrf
-                        <button type="submit" class="text-sm text-red-600 hover:underline">
-                            Logout
-                        </button>
-                    </form>
-                @else
-                    <a href="{{ route('login') }}" class="text-sm hover:text-blue-600">
-                        Login Admin
-                    </a>
-                @endauth
+                        <div class="flex items-center gap-4">
+                            <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
+                                Beranda
+                            </a>
+
+                            @auth
+                                @if(auth()->user()->is_admin)
+                                    <a href="{{ route('admin.dashboard') }}" class="text-sm hover:text-blue-600">
+                                        Dashboard Admin
+                                    </a>
+                                @endif
+
+                                <form action="{{ route('logout') }}" method="POST" class="inline">
+                                    @csrf
+                                    <button type="submit" class="text-sm text-red-600 hover:underline">
+                                        Logout
+                                    </button>
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}" class="text-sm hover:text-blue-600">
+                                    Login Admin
+                                </a>
+                            @endauth
+                        </div>
+                    </div>
+                </nav>
+
             </div>
         </div>
-    </nav>
+    </div>
+
+
+
 
     {{-- Konten utama --}}
     <main class="flex-1">

@@ -7,12 +7,70 @@
     use Illuminate\Support\Str;
 @endphp
 
-<div class="max-w-6xl mx-auto px-4 py-8 space-y-8">
+<style>
+        .floating {
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
 
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+             body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #text {
+            position: relative;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        #text:hover {
+            animation: effect linear 1s;
+        }
+
+        @keyframes effect {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            25% {
+                transform: scale(1.3, 0.6);
+            }
+
+            50% {
+                transform: scale(1.1, 0.9);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+        
+        }
+    </style>
+
+<div class="max-w-6xl mx-auto px-4 py-8 space-y-8">
     {{-- Hero: ucapan selamat datang + foto pimpinan --}}
-    <section class="bg-white rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center">
+    <section class="bg-yellow-400 rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center">
         <div class="flex-1">
-            <h1 class="text-2xl md:text-3xl font-bold mb-3">
+            <h1 class="text-2xl md:text-3xl font-bold mb-3 floating">
                 Selamat Datang di Website Kantor PT. United Tractors Bendili
             </h1>
             <p class="text-sm text-gray-600">
@@ -20,9 +78,9 @@
                 Di sini Anda dapat melihat berita terbaru, pengumuman penting, dan akses dokumen kerja yang terhubung dengan Google Drive.
             </p>
         </div>
-        <div class="w-40 h-40 rounded-full overflow-hidden border border-gray-200 flex-shrink-0">
+        <div class="w-40 h-40 rounded-none overflow-hidden flex-shrink-0">
             {{-- Pastikan file: public/images/boss.jpg --}}
-            <img src="{{ asset('images/boss.jpg') }}" alt="Pimpinan Kantor"
+            <img  id="text" src="{{ asset('images/boss.webp') }}" alt="Pimpinan Kantor"
                  class="w-full h-full object-cover">
         </div>
     </section>
@@ -31,7 +89,7 @@
     <section class="bg-white rounded-lg shadow p-6">
         <div class="flex items-center justify-between mb-4">
             <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
-            <h2 class="pelangi">TEST</h2>
+
         </div>
 
         @if($latestNews->isEmpty())
