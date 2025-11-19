@@ -8,11 +8,12 @@
     {{-- Tailwind CDN (untuk development cepat) --}}
     <script src="https://cdn.tailwindcss.com"></script>
 
-    @vite(['resources/js/react/app.tsx'])
+     @viteReactRefresh
+    @vite(['resources/js/app.jsx'])
 
 </head>
 <body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
-
+<div id="react-root"></div>
     {{-- Navbar sederhana --}}
     <div>
         <div>
@@ -20,7 +21,7 @@
                             <nav class="bg-white shadow">
                     <div class="container mx-auto px-4 py-3 flex items-center justify-between">
                     <a href="{{ route('home') }}" class="font-bold text-lg flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="{{ asset("logo.webp") }}" class="w-120px h-50">
+                            <img src="{{ asset("images/logo.webp") }}">
                         </a>
 
                         <div class="flex items-center gap-4">
@@ -53,6 +54,11 @@
             </div>
         </div>
     </div>
+
+    <nav>
+        <div id="sidebar-root">
+        </div>
+    </nav>
 
 
 

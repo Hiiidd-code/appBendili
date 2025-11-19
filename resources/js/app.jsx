@@ -1,15 +1,27 @@
 import './bootstrap';
 import React from "react";
-import { Button } from "../../components/ui/button";
+import { createRoot } from "react-dom/client"
+import { Button } from "./components/ui/button";
+import { SidebarProvider, Sidebar, SidebarTrigger } from "@/components/ui/sidebar";
+import { Switch } from "@/components/ui/switch"; 
 
-import { Switch } from "@/components/ui/switch"
- 
-const MyPage = () => {
+
+function App() {
   return (
     <div>
-      <Switch />
+      WORKING
     </div>
   )
 }
+
+
+const root = createRoot(document.getElementById("app"));
+root.render(
+  <>
+    <App />
+    <Sidebar />
+  </>
+);
+
  
 export default MyPage
