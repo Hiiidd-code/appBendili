@@ -55,8 +55,10 @@
     </div>
 
     <div id="sidebar-root">
-        AKSJALSJA
+        
     </div>
+
+    <Button variant="outline">Button</Button>
 
     {{--  
 <div class="">

@@ -10,70 +10,12 @@
      @viteReactRefresh
     @vite(['resources/js/app.jsx'])
 
-<style>
-        .floating {
-            position: relative;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-        }
-
-             body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #text {
-            position: relative;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        h1 {
-            color: green;
-        }
-
-        #text:hover {
-            animation: effect linear 1s;
-        }
-
-        @keyframes effect {
-            0% {
-                transform: scale(1, 1);
-            }
-
-            25% {
-                transform: scale(1.3, 0.6);
-            }
-
-            50% {
-                transform: scale(1.1, 0.9);
-            }
-
-            100% {
-                transform: scale(1, 1);
-            }
-        
-        }
-    </style>
-
 <div class="max-w-6xl mx-auto px-4 py-8 space-y-8">
     {{-- Hero: ucapan selamat datang + foto pimpinan --}}
     <section class="bg-yellow-400 rounded-lg shadow p-6 flex flex-col md:flex-row gap-6 items-center">
         <div class="flex-1">
-            <h1 class="text-2xl md:text-3xl font-bold mb-3 floating">
+            
+            <h1 id="text" class="text-2xl md:text-3xl font-bold mb-3 floating">
                 Selamat Datang di Website Kantor PT. United Tractors Bendili
             </h1>
             <p class="text-sm text-gray-600">
