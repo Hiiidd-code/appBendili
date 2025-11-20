@@ -7,6 +7,9 @@
     use Illuminate\Support\Str;
 @endphp
 
+     @viteReactRefresh
+    @vite(['resources/js/app.jsx'])
+
 <style>
         .floating {
             position: relative;

@@ -7,15 +7,14 @@
 
     {{-- Tailwind CDN (untuk development cepat) --}}
     <script src="https://cdn.tailwindcss.com"></script>
-
      @viteReactRefresh
     @vite(['resources/js/app.jsx'])
 
 </head>
-<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
-<div id="react-root"></div>
+<body>
+
     {{-- Navbar sederhana --}}
-    <div>
+    <div class="class="container w-full h-screen bg-gray-100 text-gray-900 flex flex-col min-h-screen"">
         <div>
             <div class="">
                             <nav class="bg-white shadow">
@@ -55,10 +54,31 @@
         </div>
     </div>
 
-    <nav>
-        <div id="sidebar-root">
-        </div>
-    </nav>
+    <div id="sidebar-root">
+        AKSJALSJA
+    </div>
+
+    {{--  
+<div class="">
+  <div class="off-screen">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </div>
+
+    <nav class="PUSH">
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>  
+</div>
+   
+
+    <script src="./movingburgbar.js"></script> --}}
 
 
 
