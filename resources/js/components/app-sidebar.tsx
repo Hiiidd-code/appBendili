@@ -1,6 +1,7 @@
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
 
 import {
+  useSidebar,
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -14,17 +15,17 @@ import {
 // Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Beranda",
     url: "#",
     icon: Home,
   },
   {
-    title: "Inbox",
+    title: "Development",
     url: "#",
     icon: Inbox,
   },
   {
-    title: "Calendar",
+    title: "Sign-In Admin",
     url: "#",
     icon: Calendar,
   },
@@ -41,8 +42,19 @@ const items = [
 ]
 
 export function AppSidebar() {
+  const {
+    state,
+    open,
+    setOpen,
+    openMobile,
+    setOpenMobile,
+    isMobile,
+    toggleSidebar,
+  } = useSidebar()
+  
+
   return (
-    <Sidebar>
+    <Sidebar variant="sidebar" side="left">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>

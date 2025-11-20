@@ -14,14 +14,14 @@
 <body>
 
     {{-- Navbar sederhana --}}
-    <div class="class="container w-full h-screen bg-gray-100 text-gray-900 flex flex-col min-h-screen"">
-        <div>
+<div class="container flex flex-col mx-auto relative sticky top-0 left-0">
             <div class="">
-                            <nav class="bg-white shadow">
-                    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-                    <a href="{{ route('home') }}" class="font-bold text-lg flex items-center space-x-3 rtl:space-x-reverse">
-                            <img src="{{ asset("images/logo.webp") }}">
-                        </a>
+                <nav class="bg-white shadow">
+                    <div class="px-1 py-1 flex items-center justify-between">
+                            <a href="{{ route('home') }}">
+                            <img src="{{ asset("images/logo.webp")}}" class="h-10 max-h-15">
+                            </a>
+                        
 
                         <div class="flex items-center gap-4">
                             <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
@@ -49,16 +49,14 @@
                         </div>
                     </div>
                 </nav>
-
             </div>
-        </div>
-    </div>
 
-    <div id="sidebar-root">
+            <div> 
+                <div id="sidebar-root" class="overflow-hidden"></div>
+            </div>
+   
         
     </div>
-
-    <Button variant="outline">Button</Button>
 
     {{--  
 <div class="">
