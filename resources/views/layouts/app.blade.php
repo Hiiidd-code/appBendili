@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <title>@yield('title', 'Website Kantor PT. United Tractors Bendili')</title>
@@ -7,22 +8,23 @@
 
     {{-- Tailwind CDN (untuk development cepat) --}}
     <script src="https://cdn.tailwindcss.com"></script>
-     @viteReactRefresh
+    @viteReactRefresh
     @vite(['resources/js/app.jsx'])
 
 </head>
+
 <body>
 
     {{-- Navbar sederhana --}}
-<div class="container h-4 relative sticky top-0">
-            <div class="h-auto w-screen">
-                <nav class="bg-white shadow">
-                    <div class="py-1 px-3">
+    <div class="container h-4 relative sticky top-0">
+        <div class="h-auto w-screen">
+            <nav class="bg-white shadow">
+                <div class="py-1 px-3">
                     <div class="flex items-center justify-between">
-                            <a href="{{ route('home') }}">
+                        <a href="{{ route('home') }}">
                             <img src="{{ asset("images/logo.webp")}}" class="h-10 max-h-15">
-                            </a>
-                        
+                        </a>
+
 
                         <div class="flex items-center gap-4 px-5">
                             <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
@@ -47,38 +49,38 @@
                                     Login Admin
                                 </a>
                             @endauth
-                            </div>
                         </div>
                     </div>
-                </nav>
-            </div>
+                </div>
+            </nav>
+        </div>
 
-            <div> 
-                <div id="sidebar-root" class="bg-sidebar-gray-600 h-full hoverflow-hidden"></div>
-            </div>
-   
-        
+        <div>
+            <div id="sidebar-root" class="bg-sidebar-gray-600 h-full hoverflow-hidden"></div>
+        </div>
+
+
     </div>
 
-    {{--  
-<div class="">
-  <div class="off-screen">
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
+    {{--
+    <div class="">
+        <div class="off-screen">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+
+        <nav class="PUSH">
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </div>
 
-    <nav class="PUSH">
-      <div class="ham-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>  
-</div>
-   
 
     <script src="./movingburgbar.js"></script> --}}
 
@@ -99,4 +101,5 @@
     </footer>
 
 </body>
+
 </html>
