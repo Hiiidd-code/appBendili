@@ -14,8 +14,8 @@
 <body>
 
     {{-- Navbar sederhana --}}
-<div class="container flex flex-col mx-auto relative sticky top-0 left-0">
-            <div class="">
+<div class="container flex flex-col mx-auto h-4 relative sticky top-0 left-0">
+            <div class="h-auto gap-2">
                 <nav class="bg-white shadow">
                     <div class="px-1 py-1 flex items-center justify-between">
                             <a href="{{ route('home') }}">
@@ -52,7 +52,7 @@
             </div>
 
             <div> 
-                <div id="sidebar-root" class="overflow-hidden"></div>
+                <div id="sidebar-root" class="h-full hoverflow-hidden"></div>
             </div>
    
         
