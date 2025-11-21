@@ -14,16 +14,17 @@
 <body>
 
     {{-- Navbar sederhana --}}
-<div class="container flex flex-col mx-auto h-4 relative sticky top-0 left-0">
-            <div class="h-auto gap-2">
+<div class="container h-4 relative sticky top-0">
+            <div class="h-auto w-screen">
                 <nav class="bg-white shadow">
-                    <div class="px-1 py-1 flex items-center justify-between">
+                    <div class="py-1 px-3">
+                    <div class="flex items-center justify-between">
                             <a href="{{ route('home') }}">
                             <img src="{{ asset("images/logo.webp")}}" class="h-10 max-h-15">
                             </a>
                         
 
-                        <div class="flex items-center gap-4">
+                        <div class="flex items-center gap-4 px-5">
                             <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
                                 Beranda
                             </a>
@@ -46,13 +47,14 @@
                                     Login Admin
                                 </a>
                             @endauth
+                            </div>
                         </div>
                     </div>
                 </nav>
             </div>
 
             <div> 
-                <div id="sidebar-root" class="h-full hoverflow-hidden"></div>
+                <div id="sidebar-root" class="bg-sidebar-gray-600 h-full hoverflow-hidden"></div>
             </div>
    
         
