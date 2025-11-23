@@ -55,6 +55,9 @@ export function AppSidebar() {
 
   return (
     <Sidebar variant="sidebar" side="left">
+      
+      
+      
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Application</SidebarGroupLabel>
