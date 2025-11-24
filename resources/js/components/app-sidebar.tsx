@@ -12,21 +12,24 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar-custom"
 
+
+
+
 // Menu items.
 const items = [
   {
     title: "Beranda",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Development",
-    url: "#",
+    url: "",
     icon: Inbox,
   },
   {
     title: "Sign-In Admin",
-    url: "#",
+    url: "login",
     icon: Calendar,
   },
   {

@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     {{-- Navbar sederhana --}}
     <div class="container h-4 relative sticky top-0">
         <div class="h-auto w-screen">
@@ -27,10 +26,13 @@
 
 
                         <div class="flex items-center gap-4 px-5">
+                            {{--
+                            
                             <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
                                 Beranda
                             </a>
-
+                              
+                              
                             @auth
                                 @if(auth()->user()->is_admin)
                                     <a href="{{ route('admin.dashboard') }}" class="text-sm hover:text-blue-600">
@@ -48,7 +50,7 @@
                                 <a href="{{ route('login') }}" class="text-sm hover:text-blue-600">
                                     Login Admin
                                 </a>
-                            @endauth
+                            @endauth --}}
                         </div>
                     </div>
                 </div>
@@ -61,31 +63,6 @@
 
 
     </div>
-
-    {{--
-    <div class="">
-        <div class="off-screen">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-        </div>
-
-        <nav class="PUSH">
-            <div class="ham-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </div>
-
-
-    <script src="./movingburgbar.js"></script> --}}
-
-
-
 
     {{-- Konten utama --}}
     <main class="flex-1">

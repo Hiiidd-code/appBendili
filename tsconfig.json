@@ -12,10 +12,11 @@
     "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["resources/js/*"]
+      "@/*": ["resources/js/*"],
+      "./*": ["resources/view/*"]
     }
   },
-  "include": ["resources/js/**/*"],
+  "include": ["resources/js/**/*", "resources/view/**/*"],
   "exclude": [
     "node_modules",
     "vendor",

@@ -44,7 +44,17 @@
             </div>
 
             @if($latestNews->isEmpty())
-                <p class="text-sm text-gray-500">Belum ada berita yang ditambahkan.</p>
+
+            <div class="flex flex-col justify-center items-center gap-2">
+                <div class="relative size-32">
+                    <img src="{{ asset('images/kosong.webp') }}" class="opacity-50">
+                </div>
+
+                <div>
+                    <p class="text-sm text-gray-500">Belum ada berita yang ditambahkan.</p>
+                </div>
+             </div>
+
             @else
                 <div class="space-y-4">
                     @foreach($latestNews as $news)
