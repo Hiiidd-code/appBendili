@@ -13,20 +13,25 @@
 
 </head>
 
-<body>
+<body class="overflow-x-hidden">
     {{-- Navbar sederhana --}}
     <div class="container h-4 relative sticky top-0">
         <div class="h-auto w-screen">
             <nav class="bg-white shadow">
-                <div class="py-1 px-3">
+                <div class="py-1 px-1">
                     <div class="flex items-center justify-between">
                         <a href="{{ route('home') }}">
                             <img src="{{ asset("images/logo.webp")}}" class="h-10 max-h-15">
                         </a>
+                        
 
 
-                        <div class="flex items-center gap-4 px-5">
-                            {{--
+                        <div class="flex items-center gap-4 px-3">
+                            <a href="{{ route('home') }}">
+                            <img src="{{ asset("images/logo-moving-as-one.png")}}" class="h-10 max-h-15">
+                            </a>
+                        
+                        {{--
                             
                             <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
                                 Beranda

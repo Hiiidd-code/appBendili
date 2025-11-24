@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Calendar, Home, Inbox, KeyRoundIcon, Search, Settings } from "lucide-react"
 
 import {
   useSidebar,
@@ -30,7 +30,7 @@ const items = [
   {
     title: "Sign-In Admin",
     url: "login",
-    icon: Calendar,
+    icon: KeyRoundIcon,
   },
   {
     title: "Search",
