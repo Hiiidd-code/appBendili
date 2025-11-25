@@ -3,9 +3,8 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel-custom"
+
 
 export function Caraousel() {
     return (
@@ -15,16 +14,21 @@ export function Caraousel() {
                     delay: 2000,
                 }),
             ]}
-        >
+
+            opts={{
+                
+                    align: "start",
+                    loop: true,
+                }}
+            className="w-full h-fit max-w-sm min-w-xs">
+
             <CarouselContent>
-                <CarouselItem><img src="resources/public/images/img1.jpg" alt="Image" /></CarouselItem>
-                <CarouselItem><img src="resources/public/images/img2.jpg" alt="Image" /></CarouselItem>
-                <CarouselItem><img src="resources/public/images/img3.jpg" alt="Image" /></CarouselItem>
-                <CarouselItem><img src="resources/public/images/img4.jpg" alt="Image" /></CarouselItem>
-                <CarouselItem><img src="resources/public/images/img5.jpg" alt="Image" /></CarouselItem>
+                <CarouselItem><img src="public/images/caraousel-a/img1.jpg" alt="Image" /></CarouselItem>
+                <CarouselItem><img src="public/images/caraousel-a/img2.jpg" alt="Image" /></CarouselItem>
+                <CarouselItem><img src="public/images/caraousel-a/img3.jpg" alt="Image" /></CarouselItem>
+                <CarouselItem><img src="public/images/caraousel-a/img4.jpg" alt="Image" /></CarouselItem>
+                <CarouselItem><img src="public/images/caraousel-a/img5.jpg" alt="Image" /></CarouselItem>
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
         </Carousel>
     )
 }

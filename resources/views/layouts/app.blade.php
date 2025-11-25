@@ -13,36 +13,44 @@
 
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden pt-5">
+
+
+    {{-- Sidebar ( =ω=)..nyaa --}}
+            <div class="z-40">
+                <div id="sidebar-root" class="z-40 fixed top-0 left-0 pt-12 bg-sidebar-gray-600"></div>
+            </div>
+
     {{-- Navbar sederhana --}}
-    <div class="container h-4 relative sticky top-0">
-        <div class="h-auto w-screen">
-            <nav class="bg-white shadow">
-                <div class="py-1 px-1">
-                    <div class="flex items-center justify-between">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset("images/logo.webp")}}" class="h-10 max-h-15">
-                        </a>
-                        
-
-
-                        <div class="flex items-center gap-4 px-3">
+    <div class="fixed top-0 z-50">
+        <div class="container h-4">
+            <div class="h-auto w-screen">
+                <nav class="bg-white shadow">
+                    <div class="py-1 px-1">
+                        <div class="flex items-center justify-between">
                             <a href="{{ route('home') }}">
-                            <img src="{{ asset("images/logo-moving-as-one.png")}}" class="h-10 max-h-15">
+                                <img src="{{ asset("images/logo.webp")}}" class="h-10 max-h-15">
                             </a>
-                        
-                        {{--
-                            
-                            <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
-                                Beranda
-                            </a>
-                              
-                              
-                            @auth
+
+
+
+                            <div class="flex items-center gap-4 px-3">
+                                <a href="{{ route('home') }}">
+                                    <img src="{{ asset("images/logo-moving-as-one.png")}}" class="h-10 max-h-15">
+                                </a>
+
+                                {{--
+
+                                <a href="{{ route('home') }}" class="text-sm hover:text-blue-600">
+                                    Beranda
+                                </a>
+
+
+                                @auth
                                 @if(auth()->user()->is_admin)
-                                    <a href="{{ route('admin.dashboard') }}" class="text-sm hover:text-blue-600">
-                                        Dashboard Admin
-                                    </a>
+                                <a href="{{ route('admin.dashboard') }}" class="text-sm hover:text-blue-600">
+                                    Dashboard Admin
+                                </a>
                                 @endif
 
                                 <form action="{{ route('logout') }}" method="POST" class="inline">
@@ -51,22 +59,17 @@
                                         Logout
                                     </button>
                                 </form>
-                            @else
+                                @else
                                 <a href="{{ route('login') }}" class="text-sm hover:text-blue-600">
                                     Login Admin
                                 </a>
-                            @endauth --}}
+                                @endauth --}}
+                            </div>
                         </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
-
-        <div>
-            <div id="sidebar-root" class="bg-sidebar-gray-600 h-full hoverflow-hidden"></div>
-        </div>
-
-
     </div>
 
     {{-- Konten utama --}}
