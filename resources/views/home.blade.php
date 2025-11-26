@@ -14,10 +14,10 @@
         <section class="bg-yellow-400 rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center">
             <div class="">
 
-                <div class="h-14 rounded-none overflow-hidden py-2">
+                <div class="h-14 sm:h-28 md:h-36 lg:h-44 rounded-none overflow-hidden">
                     {{-- Pastikan file: public/images/boss.jpg --}}
                     <img id="text" src="{{ asset('images/splash-big.gif') }}" alt="Pimpinan Kantor"
-                        class="w-full h-full object-cover ">
+                        class="w-full h-full object-cover">
                 </div>
                 <p class="text-sm text-gray-600 px-3 sm:text-xs md:text-sm lg:text-md">
                     Portal informasi resmi kantor untuk karyawan dan manajemen.
