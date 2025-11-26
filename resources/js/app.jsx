@@ -3,7 +3,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { Layout } from '@/pages/sidebartampil.tsx';
 import { CardDemo } from './components/app-card';
-import { Caraousel } from './components/app-caraousel';
+import Caraousel from './components/app-caraousel';
 
 const cardin = document.getElementById("card-root");
   if (cardin) {

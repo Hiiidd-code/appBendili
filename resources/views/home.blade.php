@@ -33,122 +33,113 @@
         </section>
 
         <section>
-            <div class="mx-auto grid grid-cols-1 p-2 px-15 sm:px-15 md:px-28 bg-cyan-950">
-                <div class="grid grid-cols-2">
-                    <div class="relative justify-between p-1">
-                        <div id="carousel-root" class="h-full"></div>
+            <div class="mx-auto grid grid-cols-1 p-2 px-15 sm:px-10 md:px-24 bg-cyan-950">
+                <div class="grid grid-cols-2 justify-center items-start gap-1">
+                    <!-- KIRI: Carousel -->
+                    <div class="p-0">
+                        <div class="relative w-full h-40 md:h-56 bg-black/70 rounded-md overflow-hidden flex items-center justify-center">
+                            <div class="absolute inset-0 blur-xl scale-10 bg-cover bg-center opacity-50"
+                                    style="background-image: url('/images/caraousel-a/img1.jpg')"></div>
+                            <div id="carousel-root" class="w-full h-full rounded-md overflow-hidden"></div>
+                        </div>
                     </div>
 
-
-                    <div class=" grid grid-cols-2 overflow-hidden">
+                    <!-- KANAN: 4 Buttons -->
+                    <div class="grid grid-cols-2 overflow-hidden h-40 md:h-56">
                         <div>
-                            <div class="w-full h-20 min-h-10 p-1 md:h-28">
-                                <button
-                                    class="w-full h-full rounded-lg bg-neutral-950 hover:bg-gray-500 opacity-90 text-xs lg:font-bold md:font-bold sm:font-bold text-white sm:text-xs md:text-sm lg:text-md">
-                                    <a href="#">
-                                        <h1 class="p-2 overflow-wrap: break-words">Development123456789</h1>
-                                    </a>
+                            <div class="w-full h-20 md:h-28 p-1">
+                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                    <h1 class="p-2 break-words">Development123456789</h1>
                                 </button>
                             </div>
-                            <div class="w-full h-20 min-h-10 p-1 md:h-28">
-                                <button
-                                    class="w-full h-full rounded-lg bg-neutral-950 hover:bg-gray-500 opacity-90 text-xs lg:font-bold md:font-bold sm:font-bold text-white sm:text-xs md:text-sm lg:text-md">
-                                    <a href="#">
-                                        <h1 class="p-2 overflow-wrap: break-words">Cevelopment123456789</h1>
-                                    </a>
+                            <div class="w-full h-20 md:h-28 p-1">
+                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                    <h1 class="p-2 break-words">Cevelopment123456789</h1>
                                 </button>
                             </div>
                         </div>
 
                         <div>
-                            <div class="w-full h-20 min-h-10 p-1 md:h-28">
-                                <button
-                                    class="w-full h-full rounded-lg bg-neutral-950 hover:bg-gray-500 opacity-90 text-xs lg:font-bold md:font-bold sm:font-bold text-white sm:text-xs md:text-sm lg:text-md">
-                                    <a href="#">
-                                        <h1 class="p-2 overflow-wrap: break-words">Aevelopment123456789</h1>
-                                    </a>
+                            <div class="w-full h-20 md:h-28 p-1">
+                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                    <h1 class="p-2 break-words">Aevelopment123456789</h1>
                                 </button>
                             </div>
-                            <div class="w-full h-20 min-h-10 p-1 md:h-28">
-                                <button
-                                    class="w-full h-full rounded-lg bg-neutral-950 hover:bg-gray-500 opacity-90 text-xs lg:font-bold md:font-bold sm:font-bold text-white sm:text-xs md:text-sm lg:text-md">
-                                    <a href="#">
-                                        <h1 class="p-2 overflow-wrap: break-words">Bevelopment123456789</h1>
-                                    </a>
+                            <div class="w-full h-20 md:h-28 p-1">
+                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                    <h1 class="p-2 break-words">Bevelopment123456789</h1>
                                 </button>
                             </div>
                         </div>
-
-                    </div>
-
-                </div>
-            </div>
-    </div>
-    </div>
-    </section>
-
-    <div class="max-w-6xl mx-auto px-4 py-8 space-y-8 overflow-x-hidden ">
-        {{-- Daftar berita terbaru --}}
-        <section class="bg-green-100 rounded-lg shadow p-6">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
-
-            </div>
-
-            @if($latestNews->isEmpty())
-
-                <div class="flex flex-col justify-center items-center gap-2">
-                    <div class="size-32">
-                        <img src="{{ asset('images/kosong.webp') }}" class="opacity-50">
-                    </div>
-
-                    <div>
-                        <p class="text-sm text-gray-500">Belum ada berita yang ditambahkan.</p>
                     </div>
                 </div>
 
-            @else
-                <div class="space-y-4">
-                    @foreach($latestNews as $news)
-                        <article class="border-b last:border-b-0 pb-4 last:pb-0 hover:gray-200">
-                            <h3 class="font-semibold text-lg">
-                                <a href="{{ route('news.show', $news) }}" class="hover:text-blue-600">
-                                    {{ $news->title }}
+            </div>
+        </section>
+
+        <div class="max-w-6xl mx-auto px-4 py-8 space-y-8 overflow-x-hidden ">
+            {{-- Daftar berita terbaru --}}
+            <section class="bg-green-100 rounded-lg shadow p-6">
+                <div class="flex items-center justify-between mb-4">
+                    <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
+
+                </div>
+
+                @if($latestNews->isEmpty())
+
+                    <div class="flex flex-col justify-center items-center gap-2">
+                        <div class="size-32">
+                            <img src="{{ asset('images/kosong.webp') }}" class="opacity-50">
+                        </div>
+
+                        <div>
+                            <p class="text-sm text-gray-500">Belum ada berita yang ditambahkan.</p>
+                        </div>
+                    </div>
+
+                @else
+                    <div class="space-y-4">
+                        @foreach($latestNews as $news)
+                            <article class="border-b last:border-b-0 pb-4 last:pb-0 hover:gray-200">
+                                <h3 class="font-semibold text-lg">
+                                    <a href="{{ route('news.show', $news) }}" class="hover:text-blue-600">
+                                        {{ $news->title }}
+                                    </a>
+                                </h3>
+                                <p class="text-xs text-gray-500 mb-1">
+                                    {{ $news->created_at->format('d M Y H:i') }}
+                                </p>
+                                <p class="text-sm text-gray-700 mb-2">
+                                    {{ Str::limit(strip_tags($news->content), 150) }}
+                                </p>
+                                <a href="{{ route('news.show', $news) }}"
+                                    class="inline-block text-sm text-blue-600 hover:underline">
+                                    Baca Selengkapnya
                                 </a>
-                            </h3>
-                            <p class="text-xs text-gray-500 mb-1">
-                                {{ $news->created_at->format('d M Y H:i') }}
-                            </p>
-                            <p class="text-sm text-gray-700 mb-2">
-                                {{ Str::limit(strip_tags($news->content), 150) }}
-                            </p>
-                            <a href="{{ route('news.show', $news) }}" class="inline-block text-sm text-blue-600 hover:underline">
-                                Baca Selengkapnya
+                            </article>
+                        @endforeach
+                    </div>
+                @endif
+            </section>
+
+            {{-- Link Google Drive --}}
+            <section class="relative bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold mb-4">Dokumen Google Drive</h2>
+                <p class="text-sm text-gray-600 mb-3">
+                    Dokumen berikut merupakan file penting yang disimpan di Google Drive dan dapat diakses oleh karyawan.
+                </p>
+
+                <ul class="list-disc list-inside space-y-2 text-sm">
+                    @foreach($google_links as $link)
+                        <li>
+                            <a href="{{ $link['url'] }}" target="_blank" class="text-blue-600 hover:underline">
+                                {{ $link['title'] }}
                             </a>
-                        </article>
+                        </li>
                     @endforeach
-                </div>
-            @endif
-        </section>
+                </ul>
+            </section>
 
-        {{-- Link Google Drive --}}
-        <section class="relative bg-white rounded-lg shadow p-6">
-            <h2 class="text-xl font-semibold mb-4">Dokumen Google Drive</h2>
-            <p class="text-sm text-gray-600 mb-3">
-                Dokumen berikut merupakan file penting yang disimpan di Google Drive dan dapat diakses oleh karyawan.
-            </p>
-
-            <ul class="list-disc list-inside space-y-2 text-sm">
-                @foreach($google_links as $link)
-                    <li>
-                        <a href="{{ $link['url'] }}" target="_blank" class="text-blue-600 hover:underline">
-                            {{ $link['title'] }}
-                        </a>
-                    </li>
-                @endforeach
-            </ul>
-        </section>
-
-    </div>
+        </div>
     </div>
 @endsection
