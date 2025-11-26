@@ -18,7 +18,7 @@
 
     {{-- Sidebar ( =ω=)..nyaa --}}
             <div class="z-40">
-                <div id="sidebar-root" class="z-40 fixed top-0 left-0 pt-12 bg-sidebar-gray-600"></div>
+                <div id="sidebar-root" class="z-[60] fixed top-0 left-0 pt-12 bg-sidebar-gray-600 pointer-events-auto"></div>
             </div>
 
     {{-- Navbar sederhana --}}

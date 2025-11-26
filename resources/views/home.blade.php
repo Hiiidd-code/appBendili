@@ -11,7 +11,7 @@
     @vite(['resources/js/app.jsx'])
 
     <div class="pt-4 z-0">
-        <section class="bg-yellow-400 rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center">
+        <section class="bg-yellow-400 rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center grid-cols-4 gap-1">
             <div class="">
 
                 <div class="h-14 sm:h-28 md:h-36 lg:h-44 rounded-none overflow-hidden">
@@ -74,7 +74,11 @@
                     </div>
                 </div>
 
+               <div id="dialog-root" class="p-1 rounded-lg"></div>    
+
             </div>
+
+            
         </section>
 
         <div class="max-w-6xl mx-auto px-4 py-8 space-y-8 overflow-x-hidden ">
