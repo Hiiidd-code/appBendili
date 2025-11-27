@@ -11,7 +11,7 @@
     @vite(['resources/js/app.jsx'])
 
     <div class="pt-4 z-0 grid grid-cols-1 gap-1">
-        <section class="bg-white rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center grid-cols-4 gap-1">
+        <section class="rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center grid-cols-4 gap-1 bg-gray-100">
             <div class="flex flex-col gap-2">
 
                 <div class="flex flex-row h-10 md:h-24 min-h-6 max-h-24 bg-yellow-400 rounded-none overflow-hidden shadow">
@@ -48,12 +48,12 @@
                     <div class="grid grid-cols-2 overflow-hidden h-40 md:h-56 text-black font-bold">
                         <div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
+                                <button class="w-full h-full bg-gray-200 rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Development123456789</h1>
                                 </button>
                             </div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
+                                <button class="w-full h-full bg-gray-200 rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Cevelopment123456789</h1>
                                 </button>
                             </div>
@@ -61,12 +61,12 @@
 
                         <div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
+                                <button class="w-full h-full bg-gray-200 rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Aevelopment123456789</h1>
                                 </button>
                             </div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
+                                <button class="w-full h-full bg-gray-200 rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Bevelopment123456789</h1>
                                 </button>
                             </div>
@@ -83,8 +83,8 @@
 
         <div class="max-w-6xl mx-auto px-4 py-8 space-y-8 overflow-x-hidden ">
             {{-- Daftar berita terbaru --}}
-            <div id="dialog-root" class="rounded-md shadow"></div>
-            <section class="bg-green-100 rounded-lg shadow p-6">
+            <div id="dialog-root" class="rounded-md shadow bg-gray-200"></div>
+            <section class="bg-gray-200 rounded-lg shadow p-6">
                 <div class="flex items-center justify-between mb-4">
                     <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
 
@@ -92,7 +92,7 @@
 
                 @if($latestNews->isEmpty())
 
-                    <div class="flex flex-col justify-center items-center gap-2">
+                    <div class="flex flex-col justify-center items-center gap-2 bg-gray-100 p-7 rounded-lg">
                         <div class="size-32">
                             <img src="{{ asset('images/kosong.webp') }}" class="opacity-50">
                         </div>
@@ -128,9 +128,11 @@
             </section>
 
             {{-- Link Google Drive --}}
-            <section class="relative bg-white rounded-lg shadow p-6">
+            <section class="relative bg-white rounded-lg shadow p-6 bg-gray-200">
                 <h2 class="text-xl font-semibold mb-4">Dokumen Google Drive</h2>
-                <p class="text-sm text-gray-600 mb-3">
+
+                <div class="p-6 bg-gray-100 rounded-lg">
+                    <p class="text-sm text-gray-600 mb-3">
                     Dokumen berikut merupakan file penting yang disimpan di Google Drive dan dapat diakses oleh karyawan.
                 </p>
 
@@ -143,6 +145,8 @@
                         </li>
                     @endforeach
                 </ul>
+                </div>
+                
             </section>
 
         </div>
