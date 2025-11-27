@@ -10,16 +10,16 @@
     @viteReactRefresh
     @vite(['resources/js/app.jsx'])
 
-    <div class="pt-4 z-0">
-        <section class="bg-yellow-400 rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center grid-cols-4 gap-1">
-            <div class="">
+    <div class="pt-4 z-0 grid grid-cols-1 gap-1">
+        <section class="bg-white rounded-none shadow w-screen p-8 space-y-8 flex flex-row gap-6 items-center grid-cols-4 gap-1">
+            <div class="flex flex-col gap-2">
 
-                <div class="h-14 sm:h-28 md:h-36 lg:h-44 rounded-none overflow-hidden">
+                <div class="flex flex-row h-10 md:h-24 min-h-6 max-h-24 bg-yellow-400 rounded-none overflow-hidden shadow">
                     {{-- Pastikan file: public/images/boss.jpg --}}
                     <img id="text" src="{{ asset('images/splash-big.gif') }}" alt="Pimpinan Kantor"
-                        class="w-full h-full object-cover">
+                        class="h-full w-full object-cover overflow-hidden">
                 </div>
-                <p class="text-sm text-gray-600 px-3 sm:text-xs md:text-sm lg:text-md">
+                <p class="text-xs text-gray-600 font-normal px-3 sm:text-xs md:text-sm lg:text-md">
                     Portal informasi resmi kantor untuk karyawan dan manajemen.
                     Di sini Anda dapat melihat berita terbaru, pengumuman penting, dan akses dokumen kerja yang terhubung
                     dengan Google Drive.
@@ -28,16 +28,16 @@
             <div class="w-40 h-40 rounded-none overflow-hidden flex-shrink-0 sm:size-40 md:size-40 lg:size-40">
                 {{-- Pastikan file: public/images/boss.jpg --}}
                 <img id="text" src="{{ asset('images/boss.webp') }}" alt="Pimpinan Kantor"
-                    class="w-full h-full object-cover">
+                    class="w-full h-full object-cover rounded-full">
             </div>
         </section>
 
         <section>
-            <div class="mx-auto grid grid-cols-1 p-2 px-15 sm:px-10 md:px-24 bg-cyan-950">
+            <div class="mx-auto grid grid-cols-1 p-2 px-15 sm:px-10 md:px-24 shadow gap-1">
                 <div class="grid grid-cols-2 justify-center items-start gap-1">
                     <!-- KIRI: Carousel -->
                     <div class="p-0">
-                        <div class="relative w-full h-40 md:h-56 bg-black/70 rounded-md overflow-hidden flex items-center justify-center">
+                        <div class="relative w-full h-40 md:h-56 bg-black/10 rounded-md overflow-hidden flex items-center justify-center">
                             <div class="absolute inset-0 blur-xl scale-10 bg-cover bg-center opacity-50"
                                     style="background-image: url('/images/caraousel-a/img1.jpg')"></div>
                             <div id="carousel-root" class="w-full h-full rounded-md overflow-hidden"></div>
@@ -45,15 +45,15 @@
                     </div>
 
                     <!-- KANAN: 4 Buttons -->
-                    <div class="grid grid-cols-2 overflow-hidden h-40 md:h-56">
+                    <div class="grid grid-cols-2 overflow-hidden h-40 md:h-56 text-black font-bold">
                         <div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Development123456789</h1>
                                 </button>
                             </div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Cevelopment123456789</h1>
                                 </button>
                             </div>
@@ -61,12 +61,12 @@
 
                         <div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Aevelopment123456789</h1>
                                 </button>
                             </div>
                             <div class="w-full h-20 md:h-28 p-1">
-                                <button class="w-full h-full rounded-lg bg-neutral-950 text-white text-xs md:text-sm">
+                                <button class="w-full h-full rounded-lg shadow text-xs md:text-sm hover:bg-gray-700/10">
                                     <h1 class="p-2 break-words">Bevelopment123456789</h1>
                                 </button>
                             </div>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-               <div id="dialog-root" class="p-1 rounded-lg"></div>    
+                   
 
             </div>
 
@@ -83,6 +83,7 @@
 
         <div class="max-w-6xl mx-auto px-4 py-8 space-y-8 overflow-x-hidden ">
             {{-- Daftar berita terbaru --}}
+            <div id="dialog-root" class="rounded-md shadow"></div>
             <section class="bg-green-100 rounded-lg shadow p-6">
                 <div class="flex items-center justify-between mb-4">
                     <h2 class="text-xl font-semibold">Berita Harian Terbaru</h2>
