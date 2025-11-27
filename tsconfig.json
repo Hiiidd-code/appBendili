@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["resources/js/*"],
+      "./*": ["resources/view/*"]
+    }
+  },
+  "include": ["resources/js/**/*", "resources/view/**/*"],
+  "exclude": [
+    "node_modules",
+    "vendor",
+    "public",
+    "bootstrap",
+    "storage"
+  ]
+}
